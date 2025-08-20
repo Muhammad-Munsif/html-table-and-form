@@ -1,0 +1,81 @@
+   /* Basic Reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the content */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling for Lists */
+ul, ol {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* List Items */
+li {
+    padding: 8px;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Custom Bullet for Unordered List */
+ul li {
+    list-style-type: square;
+    color: #007BFF;
+    margin-left: 20px;
+}
+
+/* Custom Numbering for Ordered List */
+ol {
+    counter-reset: list-counter;
+}
+
+ol li {
+    list-style: none;
+    counter-increment: list-counter;
+    position: relative;
+}
+
+ol li::before {
+    content: counter(list-counter) ". ";
+    font-weight: bold;
+    color: #FF5733;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    ul, ol {
+        max-width: 100%;
+    }
+
+    li {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
